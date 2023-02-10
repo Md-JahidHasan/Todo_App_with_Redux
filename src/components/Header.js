@@ -16,7 +16,12 @@ const Header = () => {
 
     const handleSubmit = (e) =>{
         e.preventDefault()
-        dispatch(todoAdd(input));
+        if(input.length>0){
+            dispatch(todoAdd(input));
+        }else{
+            alert('Please add todo name!')
+        }
+        
         setInput('')
     }
 
