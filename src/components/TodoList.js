@@ -1,10 +1,17 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchTodo } from '../redux/utilities/fetchTodo';
 import Todo from './Todo';
+import { useEffect } from 'react'
 
 const TodoList = () => {
     const todos = useSelector((state)=>state.todoReducer);
     const filter = useSelector((state)=>state.filterReducer);
+    const dispatch = useDispatch();
+
+    useEffect(()=>{
+        dispatch(fetchTodo)
+    }, [])
 
 
     const filterTodoByKey = (todo) => {

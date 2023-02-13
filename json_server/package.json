@@ -1,0 +1,15 @@
+{
+  "name": "json_server",
+  "version": "1.0.0",
+  "description": "Example in memory todos api with json-server by Learn with Sumit",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch db_todos.json --no-cors true --port 9000"
+  },
+  "dependencies": {
+    "json-server": "^0.17.1"
+  },
+  "keywords": [],
+  "author": "Jahid Hasan",
+  "license": "ISC"
+}

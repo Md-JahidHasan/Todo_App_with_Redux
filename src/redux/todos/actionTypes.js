@@ -1,4 +1,5 @@
 export const ADDED = 'todos/added';
+export const LOADED = 'todos/loaded';
 export const ALLCOMPLETED = 'todos/allcompleted';
 export const CLEARCOMPLETED = 'todos/clearcompleted';
 export const TOGGLED = 'todos/toggled';

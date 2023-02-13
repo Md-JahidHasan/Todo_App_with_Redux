@@ -4,7 +4,7 @@ import cancleImg from '../assets/image/cancel.png'
 import { colorSelect, deleteTodo, toggled } from '../redux/todos/actions';
 
 const Todo = ({todo}) => {
-    const {id, todoName,completed, color} = todo;
+    const {id, text,completed, color} = todo;
     const dispatch = useDispatch();
 
     const handleStatus = (todoId) =>{
@@ -42,7 +42,7 @@ const Todo = ({todo}) => {
             </div>
 
             <div className={`select-none flex-1 ${completed && 'line-through'}`}>
-                {todoName}
+                {text}
             </div>
 
             <div
