@@ -3,8 +3,7 @@ import { ADDED, ALLCOMPLETED, CLEARCOMPLETED, COLORSELECTED, DELETED, LOADED, TO
 export const todoAdd = (text) =>{
     return {
         type: ADDED,
-        payloads: text,
-        completed: false
+        payloads: text
     }
 }
 

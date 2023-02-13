@@ -4,6 +4,7 @@ import doubleClickImg from '../assets/image/double-tick.png';
 import notesImg from '../assets/image/notes.png';
 import plusImg from '../assets/image/plus.png'
 import { clearCompleted, markAsAllCompleted, todoAdd } from '../redux/todos/actions';
+import { addTodo } from '../redux/todos/thunk/addTodo';
 
 const Header = () => {
     const [input, setInput] = useState('');
@@ -17,7 +18,7 @@ const Header = () => {
     const handleSubmit = (e) =>{
         e.preventDefault()
         if(input.length>0){
-            dispatch(todoAdd(input));
+            dispatch(addTodo(input));
         }else{
             alert('Please add todo name!')
         }
